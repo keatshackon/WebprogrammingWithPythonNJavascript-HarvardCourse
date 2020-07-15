@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>My Website</title>
+      <script>
+         document.addEventListener('DOMContentLoaded',function(){
+            document.querySelector("#form").onsubmit = function(){
+               const name = document.querySelector('#name').value;
+               alert(`Hello ${name}`);
+            };
+         });
+      </script>
+   </head>
+   <body>
+      <form id="form">
+         <input id="name" name="name" placeholder="Enter your Name">
+         <input type= "submit">
+      </form>
+   </body>
+</html>

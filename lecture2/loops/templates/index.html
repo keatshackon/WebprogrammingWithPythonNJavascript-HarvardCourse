@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>My Name</title>
+      <style>
+         h1{
+            text-align:center;
+            color:red;
+            background-color: black;
+         }
+         body{
+            color:blue;
+            margin:20px
+         }
+      </style>
+   </head>
+   <body background=black>
+      <h1>Suraj's Other Names</h1>
+
+         <ol>
+            {% for names in name%}
+               <li>{{names}}</li>
+            {% endfor %}
+         </ol>
+
+
+   </body>
+</html>

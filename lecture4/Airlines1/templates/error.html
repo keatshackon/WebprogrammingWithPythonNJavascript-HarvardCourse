@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+{% endblock %}
+
+
+{% block body %}
+    <h1>Error</h1>
+
+    {{ message }}
+{% endblock %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html >
+   <head>
+      <title>My Website</title>
+      <script type="text/javascript">
+         let c=0;
+
+         function count(){
+            c++;
+            document.querySelector('#counter').innerHTML = c
+            if(c%10 === 0){
+               alert(`Sorry You Reached at ${c}`)
+            }
+         }
+      </script>
+   </head>
+   <body>
+      <h1 id="counter">1</h1>
+      <button onclick="count()">Click Me</button>
+   </body>
+</html>

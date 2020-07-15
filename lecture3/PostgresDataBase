@@ -1,0 +1,26 @@
+                                                postrgresSql DataBase!
+=================================================================================================================
+1>  <create database database_name;> to cerate the database!
+2>  <\d> to show all the public tables in database and <\l> to show list all the database!
+3   <\c> database_name> to connect to specific  database!
+
+4>  <create table tablename(column1 datatype constraint,column2 datatype constraint,...)> to create table!
+
+5>==> while define any string in database string should be in single quote!
+
+6>  <insert into table_name(col_1,col_2,col_3)values('New York','Moscow',415); > to insert data into table!
+
+7>  <select *from table_name;> to show all the data from table!
+8>  <select c1,c2 from flights;> to select particular column from table!
+9>  where clause is used to select a particular row from the table!
+10> <select * from table  where id = 3> to select the row having id 3!
+
+ 10> update flights set duration = 415 where origin = 'New York' and destination = 'Paris';
+
+ 11> HAVING clause is in only comes after GROUP BY clause!
+
+ 12> <drop table/database table_name/database_name> to delete table or database!
+
+ 13> Index is used for fast search in database it kept  references of column and start search based on the index so it could faster!
+ 14> select  origin,destination,name from flights left outer join passengers on passengers.flight_id = flights.id;
+      for outer join [notes: outer join only comes with either left or right join! ]

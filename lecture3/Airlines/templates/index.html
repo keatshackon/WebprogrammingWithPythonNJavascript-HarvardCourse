@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Flights
+{% endblock %}
+
+
+{% block head %}
+   <style>
+      h1{
+         color:gray;
+         text-align:center;
+         text-decoration: gray underline;
+      }
+      h2{
+         color:gray;
+         text-align:center;
+      }
+   </style>
+   <h1>Welcome To Flight Booking System!</h1>
+{% endblock %}
+
+
+{% block body %}
+
+ <h2>Book a Flight</h2>
+
+ <form action="{{ url_for('book')}}" method="post">
+      <select class="form-group" name="flight_id">
+         {% for flight in flights %}
+             <option value="{{ flight.id }}">{{ flight.origin }} to {{ flight.destination }}</option>
+         {% endfor %}
+      </select>
+
+      <div class="form-group" margin=30px>
+          <input class="form-control" name="name" placeholder="Passenger Name">
+     </div>
+
+     <div class="form-group">
+         <button class="btn btn-primary">Book Flight</button>
+    </div>
+ </form>
+{% endblock %}

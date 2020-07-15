@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Flights
+{% endblock %}
+
+{% block head %}
+   <link rel="stylesheet" href="{{url_for('static',filename ='style.css')}}">
+   <h1>All Flights's Origin and Destination!</h1>
+{% endblock %}
+
+{%  block body %}
+      <ul>
+         {% for flight in flights %}
+
+         <li>
+            <a href="{{url_for('flight',flight_id=flight.id)}}">
+               From {{flight.origin}} to {{flight.destination}}!
+            </a>
+         </li>
+
+         {% endfor %}
+      </ul>
+{% endblock %}
